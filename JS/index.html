@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Car Hire Service</title>
+    <link rel="stylesheet" href="style/sty.css">
+</head>
+<body>
+    <div id="formContainer">
+        <h2>Car Hire Service</h2>
+        <form id="carHireForm">
+            <label for="vehicleType">Vehicle Type (S - Saloon, HP - High Performance, V - Van):</label>
+            <input type="text" id="vehicleType" required>
+
+            <label for="hireDays">Number of Days for Hire (max 10 days):</label>
+            <input type="number" id="hireDays" min="1" max="10" required>
+
+            <label>Is insurance cover required?</label>
+            <div>
+                <input type="radio" id="insuranceYes" name="insurance" value="yes">
+                <label for="insuranceYes">Yes</label>
+                <input type="radio" id="insuranceNo" name="insurance" value="no" checked>
+                <label for="insuranceNo">No</label>
+            </div>
+
+            <label for="customerType">Is this for a new or existing customer?</label>
+            <select id="customerType">
+                <option value="new">New</option>
+                <option value="existing">Existing</option>
+            </select>
+
+            <label for="loyaltyCard">Loyalty Card Type (Bronze, Silver, Gold):</label>
+            <input type="text" id="loyaltyCard">
+
+            <button type="button" onclick="carHire()">Get Quote</button>
+        </form>
+        <div id="quoteResult"></div>
+    </div>
+    <script src="script/script.js"></script>
+</body>
+</html>
